@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Luize Weschenfelder </title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link para o arquivo CSS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="rain.css">
+<style>
+        /* Estilo para a seção sobre mim */
+        .section {
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+        header .container{
+            padding: 0px;
+        }
+
+        header h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .menu {
+            list-style: none;
+            text-align: center;
+            padding: 10px 0;
+            align-self: anchor-center;
+        }
+
+        .menu li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="rain-container"></div>
+    <script src="rain.js"></script>
+    <script>
+        // Iniciar o efeito de chuva após o carregamento do script
+        window.addEventListener('load', () => {
+            initRain({
+                dropCount: 100,
+                dropColor: '#cecacaae',
+                dropLength: 12,
+                dropSpeed: 2,
+                particleCount: 5,
+                particleSize: 10,
+                particleColor: '#cecaca',
+                particleDuration: 1,
+                blurAmount: 0 // Configura o efeito de blur
+            });
+        });
+    </script>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container row justify-content-evenly">
+            <h1 class="title"> Luize Weschenfelder</h1>
+            <ul class="menu">
+                <li><a href="https://github.com/lizwithcoffee" target="_blank"><img class="menu-icon" src="img/github-sign.png"></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre" class="section">
+        <div class="container row">
+            <div class="foto-container">
+                <img src="img/eu.png" alt="Luize Weschenfelder" class="foto">
+            </div>
+            <div class="hero-text font_text">
+                <p>Sou uma desenvolvedora apaixonada por aprender técnicas novas para aperfeiçoar meus trabalhos!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades" class="section">
+        <div class="container">
+            <h2 class="title">Habilidades</h2>
+            <div class="skill-bars">
+                <div class="skill-bar" data-skill="JavaScript" data-level="10" data-bg-color="#e0e0e0" data-fill-color="#a087ed" data-duration="2"></div>
+                <div class="skill-bar" data-skill="Python" data-level="80" data-bg-color="#e0e0e0" data-fill-color="#a087ed" data-duration="3"></div>
+                <div class="skill-bar" data-skill="HTML/CSS" data-level="95" data-bg-color="#e0e0e0" data-fill-color="#a087ed" data-duration="1.5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Formação Acadêmica -->
+    <section id="formacao" class="section">
+        <h2 class="title">Formação Acadêmica</h2>
+        <div class="container">
+            <div class="sidebar">
+                <ul>
+                    <li class="title" onclick="showDetails(0)">Ensino Médio</li>
+                    <li class="title" onclick="showDetails(1)">Lógica de Programação</li>
+                    <li class="title" onclick="showDetails(2)">Inglês</li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="details active font_text">
+                    <p><strong>Cursando o Ensino Médio</strong> - Colégio Estadual Dr Wolfram Metzler</p>
+                </div>
+                <div class="details font_text">
+                    <p><strong>Curso de Lógica de Programação e Desenvolvimento Front End (2025)</strong> - Senac Novo Hamburgo</p>
+                </div>
+                <div class="details font_text">
+                    <p><strong>Cursando Inglês</strong> - CNA Novo Hamburgo</p>
+                </div>
+            </div>
+    </section>
+
+    <!-- Seção Experiência e Projetos -->
+    <section id="experiencia" class="section">
+        <h2 class="title">Projetos</h2>
+        <div class="container">
+            <div class="masonry font_text" id="masonry-container">
+                <!-- Cards serão inseridos aqui pelo JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="section">
+        <div class="container">
+            <h2 class="title">Contato</h2>
+            <p class="font_text">Me contate via email!</p>
+            <p class="font_text">Email: <a href="mailto:luizewaraujo@gmail.com">luizewaraujo@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="footer">
+        <div class="container">
+            <p class="font_text">&copy; 2025 Luize Weschenfelder Araujo. Todos os direitos reservados.</p>
+            <p class="font_text"><a href="https://github.com/lizwithcoffee" target="_blank"> <img class="menu-icon" src="img/github-sign.png" style="margin:4px 3px 0px; width:16px"> Visite meu GitHub</a></p>
+        </div>
+    </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const skillBars = document.querySelectorAll('.skill-bar');
+
+    skillBars.forEach(bar => {
+        const level = bar.getAttribute('data-level');
+        const bgColor = bar.getAttribute('data-bg-color');
+        const fillColor = bar.getAttribute('data-fill-color');
+        const duration = bar.getAttribute('data-duration');
+
+        // Cria a estrutura interna da barra
+        bar.innerHTML = `
+            <div class="label">${bar.getAttribute('data-skill')} - ${level}%</div>
+            <div class="bar-container">
+                <div class="bar" style="--level: ${level}%; --duration: ${duration}s; background-color: ${fillColor};"></div>
+            </div>
+        `;
+
+        // Define a cor de fundo do container da barra
+        bar.querySelector('.bar-container').style.backgroundColor = bgColor;
+    });
+});
+
+function showDetails(index) {
+            const details = document.querySelectorAll('.content .details');
+            details.forEach((detail, i) => {
+                if (i === index) {
+                    detail.classList.add('active');
+                } else {
+                    detail.classList.remove('active');
+                }
+            });
+        }
+
+        const data = [
+            {
+                "title": "Portfólio",
+                "description": "Site portfólio em html, css e js",
+                "image": "img/portoflio.png"
+            }
+        ];
+
+        const masonryContainer = document.getElementById('masonry-container');
+
+        data.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const title = document.createElement('h3');
+            title.textContent = item.title;
+            card.appendChild(title);
+
+            if (item.image) {
+                const image = document.createElement('img');
+                image.src = item.image;
+                image.alt = item.title;
+                card.appendChild(image);
+            }
+
+            const description = document.createElement('p');
+            description.textContent = item.description;
+            card.appendChild(description);
+
+            masonryContainer.appendChild(card);
+        });
+</script>
+
+</body>
+</html>

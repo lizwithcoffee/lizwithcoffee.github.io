@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    background-image: url('../img/5503.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover; /* Garante que a imagem de fundo cubra toda a tela */
+    color: #ddd5f5;
+    line-height: 1.6;   
+}
+.title{
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.font_text, .skill-bar .label{
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ddd5f5;
+    text-align: center; /* Centraliza todo o conteúdo do cabeçalho */
+}
+
+header h1 {
+    font-size: 2rem;  /* Diminuir o tamanho do título */
+    text-shadow: 2px 2px black;
+    margin-bottom: 5px; /* Diminuir o espaçamento entre o título e os links */
+    color: #bd8a8b; /* Define a cor do texto */
+}
+
+/* Menu de navegação */
+nav {
+    margin-top: 10px; /* Espaçamento opcional acima do menu */
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex; /* Alinha os itens na horizontal */
+    justify-content: center;
+    padding: 0; /* Remove espaçamento interno */
+    gap: 15px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li {
+    margin: 0; /* Remove margens extras */
+}
+
+nav ul li a {
+    color: #ddd5f5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    background-color: #ffe6f2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    transition: background-color 0.3s ease; /* Animação para hover */
+}
+
+nav ul li a:hover {
+    background-color: black; /* Cor ao passar o mouse */
+    color: #ddd5f5;
+}
+
+/* Seções */
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #d3999a;
+    text-align: center;
+}
+
+/* Parágrafos e listas */
+section p, section ul, section li {
+    font-size: 1.8rem;
+    color: #ddd5f5;
+    padding-top: 1.2rem;
+    width: 80%;
+    margin: 0px auto;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #3b3a38;
+    color: #ddd5f5;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 2px solid black;
+}
+
+/* Links */
+a {
+    color: #ddd5f5;
+    text-decoration: none;
+}
+
+/* Estilo para as imagens da chuva */
+.chuva {
+    position: absolute;
+    width: 50px; /* Tamanho da imagem */
+    height: 50px;
+    animation: cair 5s linear infinite;
+    z-index: 1000; /* Aparece acima do conteúdo */
+    pointer-events: none; /* Para não interferir na interação com outros elementos */
+}
+
+/* Animação da chuva */
+@keyframes cair {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 0.5; /* Fica mais transparente ao cair */
+    }
+}
+
+/* Centralizar a foto de perfil */
+.foto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Espaçamento opcional acima */
+}
+
+.foto {
+    border-radius: 50%; /* Deixa a imagem redonda, opcional */
+    border: 3px solid black; /* Borda opcional */
+    max-width: 200px; /* Limita o tamanho da imagem */
+    height: auto;
+}
+
+/* Centralizar o título, subtítulo e texto na seção "Sobre Mim" */
+#sobre h2, 
+#sobre p {
+    text-align: center;
+}
+
+#sobre .foto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Espaçamento opcional */
+}
+
+/* Ajuste para seções grandes */
+.section {
+    background-color:#3b3a38; /* Fundo branco */
+}
+
+/* Centralizando texto dentro das seções */
+.section .container {
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Ajustando listas para melhor espaçamento */
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+.container.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#sobre {
+    min-height: 72vh;
+    place-content: center;
+    padding: 20px 26vw;
+}
+
+.container.row.justify-content-evenly {
+    justify-content: space-around;
+}
+
+img.menu-icon {
+    width: 38px;
+    filter: invert(1);
+    padding-top: 10px;
+}
+.hero-text{
+    padding-top: 1.2rem;
+}
+h1.title {
+    padding-top: 0.5rem;
+}
+
+.skill-bars {
+    width: 80%;
+    max-width: 420px;
+    margin: 0px auto;
+}
+
+.skill-bar {
+    margin-bottom: 25px; /* Espaço entre as barras */
+}
+
+.skill-bar .label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ddd5f5;
+    margin-bottom: 5px; /* Espaço entre o label e a barra */
+}
+
+.skill-bar .bar-container {
+    background-color: #e0e0e0; /* Cor de fundo da barra */
+    height: 3px; /* Altura da barra */
+    border-radius: 6px; /* Bordas arredondadas */
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar .bar {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50; /* Cor de preenchimento padrão */
+    border-radius: 2px; /* Bordas arredondadas */
+    animation: fillBar var(--duration) ease-in-out forwards;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--level);
+    }
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #333;
+    color: #ddd5f5;
+    padding: 20px;
+    border-radius: 12px;
+}
+.sidebar h2 {
+    margin-top: 0;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+    width: 100%;
+}
+.sidebar ul li {
+    margin: 15px 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #a087ed57;
+}
+.content {
+    width: 70%;
+    padding: 20px;
+}
+.content .details {
+    display: none;
+}
+.content .details.active {
+    display: block;
+}
+
+#formacao .container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fefefe00;
+    border: 1px solid #a087ed57;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+}
+
+.masonry {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+.card {
+    background-color: #ddd5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: calc(33.333% - 32px);
+    box-sizing: border-box;
+    color:#412d7d;
+}
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.card h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    
+}
+.card p {
+    margin: 8px auto;
+    font-size: 1.2rem;
+    color:#301f63;
+}
+#contato .container p{
+    color:#ddd5f5;
+}
+
+#contato .container p a{
+    color:#bca9f5;
+    cursor: pointer;
+}
+
+.section {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+header .container{
+    padding: 0px;
+}
+
+header h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    align-self: anchor-center;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}

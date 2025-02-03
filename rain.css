@@ -1,0 +1,30 @@
+.rain-container {
+    position: fixed;
+    filter: blur(2px); /* Efeito de blur no contêiner */
+}
+
+.drop {
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background-color: #cecaca;
+    animation: fall linear infinite;
+    will-change: transform; /* Otimiza a renderização */
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes spread {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(var(--spread-x) * 1px), calc(var(--spread-y) * 1px)) scale(0);
+        opacity: 0;
+    }
+}
